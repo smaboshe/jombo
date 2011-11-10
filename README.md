@@ -18,7 +18,7 @@ This is all very new to me so if you have contributions, bring them but be gentl
 
 In a Rails 3.1.x project add the gem to your assets group in your `Gemfile`. It is currently in beta:
 
-	gem "bootstrap", "~> 0.0.1.beta1"
+	gem "pcs_bootstrap", "~> 0.0.1.beta1"
 
 Bundle the gem using bundler:
 
