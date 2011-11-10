@@ -26,7 +26,7 @@ Bundle the gem using bundler:
 
 Once your bundle is updated, you can automatically add the assets to your CSS and Javascript manifest files using the generator:
 
-	rails generate pcs_boostrap:install
+	rails generate boostrap:install
 
 Alternatively, you can manually require the assets by adding:
 
