@@ -1,6 +1,6 @@
 require 'rails/generators'
 
-module PcsBootstrap
+module Bootstrap
   module Generators
     class InstallGenerator < Rails::Generators::Base
       source_root File.join(File.dirname(__FILE__), 'templates')

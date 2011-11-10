@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "pcs_bootstrap"
   gem.require_paths = ["lib"]
-  gem.version       = PcsBootstrap::VERSION
+  gem.version       = Bootstrap::VERSION
 
   #gem.add_development_dependency "rspec", "~> 2.6"
 end
