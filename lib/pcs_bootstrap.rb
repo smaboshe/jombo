@@ -1,5 +1,6 @@
 require "pcs_bootstrap/version"
 
 module PcsBootstrap
-  # Your code goes here...
+  class Engine < Rails::Engine
+  end
 end
