@@ -16,7 +16,7 @@ This is all very new to me so if you have contributions, bring them but be gentl
 
 ## Setup
 
-In a Rails 3.1.x project add the gem to your Gemfile. It is currently in beta:
+In a Rails 3.1.x project add the gem to your assets group in your `Gemfile`. It is currently in beta:
 
 	gem "pcs_bootstrap", "~> 0.0.1.beta"
 
