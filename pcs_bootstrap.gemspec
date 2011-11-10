@@ -4,7 +4,7 @@ require File.expand_path('../lib/pcs_bootstrap/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Silumesii Maboshe"]
   gem.email         = ["silumesii@pencilcasestudios.com"]
-  gem.description   = %q{Package Bootstrap from Twitter assets as a gem.}
+  gem.description   = %q{Package Bootstrap from Twitter (2.0 work-in-progress branch) assets as a gem.}
   gem.summary       = %q{This gem allows you to use Bootstrap from Twitter with the Rails 3.1.x asset pipline.}
   gem.homepage      = "http://github.com/smaboshe/pcs_bootstrap"
 
