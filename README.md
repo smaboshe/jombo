@@ -6,8 +6,6 @@
 
 Please note that this project tracks the 2.0 work-in-progress branch. This branch is very fluid at the moment so things will more than likely not work they way you expect.
 
----
-
 ## Back-story
 
 I'm a phenomenal fan of [Bootstrap](http://twitter.github.com/bootstrap/) from Twitter. One might even say a cheerleader! Anyhow, I use [Rails](http://rubyonrails.org/) and wanted to experiment with the bleeding edge of Bootstrap as it was being developed. Manually adding adding and updating the assets in one project was fine. Doing it for two or three projects over-and-over started to become cumbersome.
@@ -15,8 +13,6 @@ I'm a phenomenal fan of [Bootstrap](http://twitter.github.com/bootstrap/) from T
 I had never made a gem before. The shiny new Rails 3.1.x asset pipeline offered an interesting new piece of learning. So, here it is, my first Ruby gem in living history.
 
 This is all very new to me so if you have contributions, bring them but be gentle.
-
----
 
 ## Setup
 
@@ -43,8 +39,6 @@ to your `application.js` and
 to your `application.css`.
 
 You may need to restart your application for the changes to reflect (I find this behaviour a bit odd and am looking in to why).
-
----
 
 ## Usage
 
