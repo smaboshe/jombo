@@ -1,7 +1,7 @@
-require "pcs_bootstrap/version"
-require "pcs_bootstrap/generators/install_generator"
+require "jombo/version"
+require "jombo/generators/install_generator"
 
-module Bootstrap
+module Jombo
   class Engine < Rails::Engine
     # Allows Rails to automatically include assets
   end
