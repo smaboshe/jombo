@@ -14,6 +14,18 @@ I had never made a gem before. The shiny new Rails 3.1.x asset pipeline offered 
 
 This is all very new to me so if you have contributions, bring them but be gentle.
 
+## What's up with the name?
+
+I think the names of things matter ([Genesis 2:19](http://www.biblegateway.com/passage/?search=Genesis%202:19&version=ESV)).
+
+The name "bootstrap" was an obvious choice but this is not the official [Bootstrap](http://twitter.github.com/bootstrap/) gem. Besides, the name was already taken on [RubyGems](http://rubygems.org/gems/bootstrap).
+
+The project started out being called `pcs_bootstrap` (PCS for [Pencil Case Studios](http://pencilcasestudios.com)). That name was descriptive, perhaps, but didn't have personality. So, I turned from English to look at options in some of the Zambian languages. The word "jombo" means "boot" in several vernacular languages in Zambia.
+
+Jombos are for getting work done but they can be awkward and funny. Since I was a kid I've always thought of jombos as fun. To this day I can't think of, or say "jombo" without smiling (even just a little).
+
+So there you have it ... and you didn't even want to know!
+
 ## Setup
 
 In a Rails 3.1.x project add the gem to your assets group in your `Gemfile`. It is currently in beta:
