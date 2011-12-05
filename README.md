@@ -57,3 +57,9 @@ You may need to restart your application for the changes to reflect (I find this
 Once the setup is complete, you'll be able to use Bootstrap. For that I recommend you have a look at [their](http://twitter.github.com/bootstrap/) documentation.
 
 Enjoy!
+
+## License
+
+Copyright 2011 [Pencil Case Studios](http://pencilcasestudios.com).
+
+Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
