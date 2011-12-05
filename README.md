@@ -4,7 +4,7 @@
 
 `jombo` is a gem that packages the asset files used in Bootstrap from Twitter.
 
-Please note that this project tracks the 2.0 work-in-progress branch. This branch is very fluid at the moment so things will more than likely not work they way you expect.
+Please note that this project tracks the 2.0 work-in-progress branch. The branch is very fluid so things will likely not work from time to time.
 
 ## Back-story
 
