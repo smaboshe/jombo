@@ -30,7 +30,7 @@ So there you have it ... and you didn't even want to know!
 
 In a Rails 3.1.x project add the gem to your assets group in your `Gemfile`. It is currently in beta:
 
-	gem "jombo", "~> 0.0.1.beta7"
+	gem "jombo", "~> 0.0.1.beta9"
 
 Bundle the gem using bundler:
 
