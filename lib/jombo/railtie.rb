@@ -1,4 +1,4 @@
-require 'rails'
+require "rails"
 
 module Jombo
   class Railtie < ::Rails::Railtie
