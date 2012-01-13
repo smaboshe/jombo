@@ -101,9 +101,7 @@
  * @author Christian Bach/christian.bach@polyester.se
  */
 
-!function ($) {
-    "use strict"
-
+(function ($) {
     $.extend({
         tablesorter: new
         function () {
@@ -1030,4 +1028,4 @@
             }
         }
     });
-}( window.jQuery )
+})(jQuery);
