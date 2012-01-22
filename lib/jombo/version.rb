@@ -1,3 +1,3 @@
 module Jombo
-  VERSION = "0.0.1.beta23"
+  VERSION = "0.0.1.beta24"
 end
