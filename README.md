@@ -2,15 +2,13 @@
 
 ## Preamble
 
-`jombo` is a gem that packages the asset files used in Bootstrap from Twitter.
-
-Please note that this project tracks the 2.0 work-in-progress branch. The branch is very fluid so things will likely not work from time to time.
+`jombo` is a gem that packages the asset files used in  [Bootstrap](http://twitter.github.com/bootstrap/), from Twitter, so that you can use them in the Rails 3 Asset Pipeline.
 
 ## Back-story
 
-I'm a phenomenal fan of [Bootstrap](http://twitter.github.com/bootstrap/) from Twitter. One might even say a cheerleader! Anyhow, I use [Rails](http://rubyonrails.org/) and wanted to experiment with the bleeding edge of Bootstrap as it was being developed. Manually adding adding and updating the assets in one project was fine. Doing it for two or three projects over-and-over started to become cumbersome.
+I'm a phenomenal fan of [Bootstrap](http://twitter.github.com/bootstrap/). One might even say a cheerleader! Anyhow, I use [Rails](http://rubyonrails.org/) and wanted to experiment with the bleeding edge of Bootstrap as it was being developed. Manually adding adding and updating the assets in one project was fine. Doing it for two or three projects over-and-over started to become cumbersome.
 
-I had never made a gem before. The shiny new Rails 3.1.x asset pipeline offered an interesting new piece of learning. So, here it is, my first Ruby gem in living history.
+I had never made a gem before. The shiny new Rails 3 Asset Pipeline offered an interesting new piece of learning. So, here it is, my first Ruby gem in living history.
 
 This is all very new to me so if you have contributions, bring them but be gentle.
 
@@ -28,9 +26,12 @@ So there you have it ... and you didn't even want to know!
 
 ## Setup
 
-In a Rails 3.1.x project add the gem to your assets group in your `Gemfile`. It is currently in beta:
+In a Rails 3.1.x (or later) project add the gem to your assets group in your `Gemfile`.
 
-	gem "jombo", "~> 0.0.1.beta9"
+	gem "jombo", "~> 1.0.1"
+
+You can expect the RubyGems page to have the [latest version available](http://rubygems.org/gems/jombo).
+
 
 Bundle the gem using bundler:
 
@@ -50,7 +51,7 @@ to your `application.js` and
 
 to your `application.css`.
 
-You may need to restart your application for the changes to reflect (I find this behaviour a bit odd and am looking in to why).
+You will need to restart your application for the changes to reflect.
 
 ## Usage
 

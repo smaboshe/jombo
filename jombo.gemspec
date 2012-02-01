@@ -4,8 +4,8 @@ require File.expand_path('../lib/jombo/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Silumesii Maboshe"]
   gem.email         = ["silumesii@pencilcasestudios.com"]
-  gem.description   = %q{Package Bootstrap from Twitter (2.0 work-in-progress branch) assets as a gem.}
-  gem.summary       = %q{This gem allows you to use Bootstrap from Twitter with the Rails 3.1.x asset pipline.}
+  gem.description   = %q{Package Bootstrap from Twitter assets as a gem.}
+  gem.summary       = %q{This gem allows you to use Bootstrap from Twitter with the Rails 3 Asset Pipline.}
   gem.homepage      = "http://github.com/smaboshe/jombo"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
