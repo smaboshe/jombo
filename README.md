@@ -6,7 +6,7 @@
 
 ## Back-story
 
-I'm a phenomenal fan of [Bootstrap](http://twitter.github.com/bootstrap/). One might even say a cheerleader! Anyhow, I use [Rails](http://rubyonrails.org/) and wanted to experiment with the bleeding edge of Bootstrap as it was being developed. Manually adding adding and updating the assets in one project was fine. Doing it for two or three projects over-and-over started to become cumbersome.
+I'm a phenomenal fan of [Bootstrap](http://twitter.github.com/bootstrap/). One might even say a cheerleader! Anyhow, I use [Rails](http://rubyonrails.org/) and wanted to experiment with the bleeding edge of Bootstrap as it was being developed. Manually adding adding and updating the assets in one project was fine. Doing it for two or three projects over-and-over started to become cumbersome.
 
 I had never made a gem before. The shiny new Rails 3 Asset Pipeline offered an interesting new piece of learning. So, here it is, my first Ruby gem in living history.
 
