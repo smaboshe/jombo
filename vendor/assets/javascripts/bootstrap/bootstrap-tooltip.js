@@ -1,5 +1,5 @@
 /* ===========================================================
- * bootstrap-tooltip.js v2.0.0
+ * bootstrap-tooltip.js v2.0.2
  * http://twitter.github.com/bootstrap/javascript.html#tooltips
  * Inspired by the original jQuery.tipsy by Jason Frame
  * ===========================================================
@@ -73,8 +73,9 @@
       if (!self.options.delay || !self.options.delay.show) {
         self.show()
       } else {
+        clearTimeout(this.timeout)
         self.hoverState = 'in'
-        setTimeout(function() {
+        this.timeout = setTimeout(function() {
           if (self.hoverState == 'in') {
             self.show()
           }
@@ -88,8 +89,9 @@
       if (!self.options.delay || !self.options.delay.hide) {
         self.hide()
       } else {
+        clearTimeout(this.timeout)
         self.hoverState = 'out'
-        setTimeout(function() {
+        this.timeout = setTimeout(function() {
           if (self.hoverState == 'out') {
             self.hide()
           }
@@ -205,8 +207,6 @@
 
       title = $e.attr('data-original-title')
         || (typeof o.title == 'function' ? o.title.call($e[0]) :  o.title)
-
-      title = title.toString().replace(/(^\s*|\s*$)/, "")
 
       return title
     }
