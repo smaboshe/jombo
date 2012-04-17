@@ -18,9 +18,10 @@
  * ========================================================== */
 
 
-!function( $ ){
+!function ($) {
 
-  "use strict"
+  "use strict"; // jshint ;_;
+
 
  /* CAROUSEL CLASS DEFINITION
   * ========================= */
@@ -36,8 +37,10 @@
 
   Carousel.prototype = {
 
-    cycle: function () {
+    cycle: function (e) {
+      if (!e) this.paused = false
       this.options.interval
+        && !this.paused
         && (this.interval = setInterval($.proxy(this.next, this), this.options.interval))
       return this
     }
@@ -63,7 +66,8 @@
       return this.slide(pos > activePos ? 'next' : 'prev', $(children[pos]))
     }
 
-  , pause: function () {
+  , pause: function (e) {
+      if (!e) this.paused = true
       clearInterval(this.interval)
       this.interval = null
       return this
@@ -86,6 +90,7 @@
         , direction = type == 'next' ? 'left' : 'right'
         , fallback  = type == 'next' ? 'first' : 'last'
         , that = this
+        , e = $.Event('slide')
 
       this.sliding = true
 
@@ -96,11 +101,12 @@
       if ($next.hasClass('active')) return
 
       if ($.support.transition && this.$element.hasClass('slide')) {
+        this.$element.trigger(e)
+        if (e.isDefaultPrevented()) return
         $next.addClass(type)
         $next[0].offsetWidth // force reflow
         $active.addClass(direction)
         $next.addClass(direction)
-        this.$element.trigger('slide')
         this.$element.one($.support.transition.end, function () {
           $next.removeClass([type, direction].join(' ')).addClass('active')
           $active.removeClass(['active', direction].join(' '))
@@ -108,7 +114,8 @@
           setTimeout(function () { that.$element.trigger('slid') }, 0)
         })
       } else {
-        this.$element.trigger('slide')
+        this.$element.trigger(e)
+        if (e.isDefaultPrevented()) return
         $active.removeClass('active')
         $next.addClass('active')
         this.sliding = false
@@ -126,7 +133,7 @@
  /* CAROUSEL PLUGIN DEFINITION
   * ========================== */
 
-  $.fn.carousel = function ( option ) {
+  $.fn.carousel = function (option) {
     return this.each(function () {
       var $this = $(this)
         , data = $this.data('carousel')
@@ -159,4 +166,4 @@
     })
   })
 
-}( window.jQuery );
+}(window.jQuery);

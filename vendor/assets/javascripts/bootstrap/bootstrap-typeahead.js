@@ -17,16 +17,22 @@
  * limitations under the License.
  * ============================================================ */
 
-!function( $ ){
 
-  "use strict"
+!function($){
 
-  var Typeahead = function ( element, options ) {
+  "use strict"; // jshint ;_;
+
+
+ /* TYPEAHEAD PUBLIC CLASS DEFINITION
+  * ================================= */
+
+  var Typeahead = function (element, options) {
     this.$element = $(element)
     this.options = $.extend({}, $.fn.typeahead.defaults, options)
     this.matcher = this.options.matcher || this.matcher
     this.sorter = this.options.sorter || this.sorter
     this.highlighter = this.options.highlighter || this.highlighter
+    this.updater = this.options.updater || this.updater
     this.$menu = $(this.options.menu).appendTo('body')
     this.source = this.options.source
     this.shown = false
@@ -40,9 +46,13 @@
   , select: function () {
       var val = this.$menu.find('.active').attr('data-value')
       this.$element
-        .val(val)
+        .val(this.updater(val))
         .change()
       return this.hide()
+    }
+
+  , updater: function (item) {
+      return item
     }
 
   , show: function () {
@@ -78,7 +88,7 @@
       }
 
       items = $.grep(this.source, function (item) {
-        if (that.matcher(item)) return item
+        return that.matcher(item)
       })
 
       items = this.sorter(items)
@@ -110,7 +120,7 @@
     }
 
   , highlighter: function (item) {
-      var query = this.query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
+      var query = this.query.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&')
       return item.replace(new RegExp('(' + query + ')', 'ig'), function ($1, match) {
         return '<strong>' + match + '</strong>'
       })
@@ -203,11 +213,13 @@
           break
 
         case 38: // up arrow
+          if (e.type != 'keydown') break
           e.preventDefault()
           this.prev()
           break
 
         case 40: // down arrow
+          if (e.type != 'keydown') break
           e.preventDefault()
           this.next()
           break
@@ -238,7 +250,7 @@
   /* TYPEAHEAD PLUGIN DEFINITION
    * =========================== */
 
-  $.fn.typeahead = function ( option ) {
+  $.fn.typeahead = function (option) {
     return this.each(function () {
       var $this = $(this)
         , data = $this.data('typeahead')
@@ -270,4 +282,4 @@
     })
   })
 
-}( window.jQuery );
+}(window.jQuery);

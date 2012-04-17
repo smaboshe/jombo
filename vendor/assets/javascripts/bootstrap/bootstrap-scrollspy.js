@@ -17,9 +17,11 @@
  * limitations under the License.
  * ============================================================== */
 
-!function ( $ ) {
 
-  "use strict"
+!function ($) {
+
+  "use strict"; // jshint ;_;
+
 
   /* SCROLLSPY CLASS DEFINITION
    * ========================== */
@@ -46,8 +48,8 @@
         var self = this
           , $targets
 
-        this.offsets = []
-        this.targets = []
+        this.offsets = $([])
+        this.targets = $([])
 
         $targets = this.$body
           .find(this.selector)
@@ -92,16 +94,15 @@
 
         this.activeTarget = target
 
-        this.$body
-          .find(this.selector).parent('.active')
+        $(this.selector)
+          .parent('.active')
           .removeClass('active')
 
-        active = this.$body
-          .find(this.selector + '[href="' + target + '"]')
+        active = $(this.selector + '[href="' + target + '"]')
           .parent('li')
           .addClass('active')
 
-        if ( active.parent('.dropdown-menu') )  {
+        if (active.parent('.dropdown-menu'))  {
           active = active.closest('li.dropdown').addClass('active')
         }
 
@@ -141,4 +142,4 @@
     })
   })
 
-}( window.jQuery );
+}(window.jQuery);
