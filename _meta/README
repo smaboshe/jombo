@@ -1,3 +1,6 @@
+CSS
+===
+
 When converting bootstrap.css to bootstrap.css.erb:
 
 Find:
@@ -9,3 +12,18 @@ Find:
 ../img/glyphicons-halflings-white.png
 Replace with:
 <%= asset_path "glyphicons-halflings-white.png" %>
+
+
+
+
+
+
+
+
+
+Javascript
+==========
+
+rm vendor/assets/javascripts/bootstrap/bootstrap.min.js
+rm vendor/assets/javascripts/bootstrap/application.js
+rm vendor/assets/javascripts/bootstrap/jquery.js
