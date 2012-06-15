@@ -1,11 +1,11 @@
 When converting bootstrap.css to bootstrap.css.erb:
 
 Find:
-"../img/glyphicons-halflings.png"
+../img/glyphicons-halflings.png
 Replace with:
 <%= asset_path "glyphicons-halflings.png" %>
 
 Find:
-"../img/glyphicons-halflings-white.png"
+../img/glyphicons-halflings-white.png
 Replace with:
 <%= asset_path "glyphicons-halflings-white.png" %>
