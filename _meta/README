@@ -24,6 +24,7 @@ Replace with:
 Javascript
 ==========
 
-rm vendor/assets/javascripts/bootstrap/bootstrap.min.js
 rm vendor/assets/javascripts/bootstrap/application.js
+rm vendor/assets/javascripts/bootstrap/bootstrap.js
+rm vendor/assets/javascripts/bootstrap/bootstrap.min.js
 rm vendor/assets/javascripts/bootstrap/jquery.js
