@@ -1,5 +1,5 @@
 /* ===========================================================
- * bootstrap-tooltip.js v2.0.3
+ * bootstrap-tooltip.js v2.0.4
  * http://twitter.github.com/bootstrap/javascript.html#tooltips
  * Inspired by the original jQuery.tipsy by Jason Frame
  * ===========================================================
@@ -84,9 +84,9 @@
   , leave: function (e) {
       var self = $(e.currentTarget)[this.type](this._options).data(this.type)
 
+      if (this.timeout) clearTimeout(this.timeout)
       if (!self.options.delay || !self.options.delay.hide) return self.hide()
 
-      clearTimeout(this.timeout)
       self.hoverState = 'out'
       this.timeout = setTimeout(function() {
         if (self.hoverState == 'out') self.hide()
@@ -148,20 +148,11 @@
       }
     }
 
-  , isHTML: function(text) {
-      // html string detection logic adapted from jQuery
-      return typeof text != 'string'
-        || ( text.charAt(0) === "<"
-          && text.charAt( text.length - 1 ) === ">"
-          && text.length >= 3
-        ) || /^(?:[^<]*<[\w\W]+>[^>]*$)/.exec(text)
-    }
-
   , setContent: function () {
       var $tip = this.tip()
         , title = this.getTitle()
 
-      $tip.find('.tooltip-inner')[this.isHTML(title) ? 'html' : 'text'](title)
+      $tip.find('.tooltip-inner')[this.options.html ? 'html' : 'text'](title)
       $tip.removeClass('fade in top bottom left right')
     }
 
@@ -270,6 +261,7 @@
   , trigger: 'hover'
   , title: ''
   , delay: 0
+  , html: true
   }
 
 }(window.jQuery);

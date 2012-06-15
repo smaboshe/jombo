@@ -1,5 +1,5 @@
 /* =============================================================
- * bootstrap-scrollspy.js v2.0.3
+ * bootstrap-scrollspy.js v2.0.4
  * http://twitter.github.com/bootstrap/javascript.html#scrollspy
  * =============================================================
  * Copyright 2012 Twitter, Inc.
@@ -35,7 +35,7 @@
     this.selector = (this.options.target
       || ((href = $(element).attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
       || '') + ' .nav li > a'
-    this.$body = $('body').on('click.scroll.data-api', this.selector, process)
+    this.$body = $('body')
     this.refresh()
     this.process()
   }
@@ -58,7 +58,7 @@
               , href = $el.data('target') || $el.attr('href')
               , $href = /^#\w/.test(href) && $(href)
             return ( $href
-              && href.length
+              && $href.length
               && [[ $href.position().top, href ]] ) || null
           })
           .sort(function (a, b) { return a[0] - b[0] })
@@ -108,7 +108,7 @@
           .parent('li')
           .addClass('active')
 
-        if (active.parent('.dropdown-menu'))  {
+        if (active.parent('.dropdown-menu').length)  {
           active = active.closest('li.dropdown').addClass('active')
         }
 
