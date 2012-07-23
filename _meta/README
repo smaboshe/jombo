@@ -15,6 +15,10 @@ Git/Update Sequence
 - Merge "update" with "build"
 - Finalise the version update
 
+- Switch to "release" branch
+- Merge "release" with "update"
+- Release the gem to rubygems
+	rake release
 
 CSS
 ===
