@@ -20,6 +20,10 @@ Git/Update Sequence
 - rm -rf pkg/
 - Release the gem to rubygems
 	rake release
+	
+- Switch to "master" branch
+- Merge "master" with "release"
+
 
 CSS
 ===
