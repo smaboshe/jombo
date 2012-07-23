@@ -11,6 +11,11 @@ Git/Update Sequence
 - rake build
 - Test using the Bootpolish app
 
+- Switch to "update" branch
+- Merge "update" with "build"
+- Finalise the version update
+
+
 CSS
 ===
 
