@@ -1,3 +1,16 @@
+Git/Update Sequence
+===================
+
+- Merge "master" with "work"
+- Switch to "work"
+- Asset updates on "work"
+- Switch to "build
+- Merge "work with "build"
+- Update version to <VERSION NUMBER>.beta<NUMBER>
+- rm -rf pkg/
+- rake build
+- Test using the Bootpolish app
+
 CSS
 ===
 
