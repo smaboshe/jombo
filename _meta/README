@@ -17,6 +17,7 @@ Git/Update Sequence
 
 - Switch to "release" branch
 - Merge "release" with "update"
+- rm -rf pkg/
 - Release the gem to rubygems
 	rake release
 
