@@ -12,6 +12,7 @@ Git/Update Sequence
 - Test using the Bootpolish Rails app
 
 - Switch to "update" branch
+- Update version to <VERSION NUMBER + 1> in version.rb
 - Merge "update" with "build"
 - Finalise the version update
 
