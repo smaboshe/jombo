@@ -6,10 +6,10 @@ Git/Update Sequence
 - Asset updates on "work"
 - Switch to "build
 - Merge "work with "build"
-- Update version to <VERSION NUMBER>.beta<NUMBER>
+- Update version to <VERSION NUMBER + 1>.beta<NUMBER (starting from 1)> in version.rb
 - rm -rf pkg/
 - rake build
-- Test using the Bootpolish app
+- Test using the Bootpolish Rails app
 
 - Switch to "update" branch
 - Merge "update" with "build"
