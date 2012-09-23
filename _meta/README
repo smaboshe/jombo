@@ -24,8 +24,8 @@ Git/Update Sequence
 	
 - Switch to "master" branch
 - Merge "master" with "release"
-- git push origin
-- git push github
+- Push to GitHub
+	git push origin --tags
 
 
 CSS
