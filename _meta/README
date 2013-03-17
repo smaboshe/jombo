@@ -1,8 +1,8 @@
 Git/Update Sequence
 ===================
 
-- Merge "master" with "work"
 - Switch to "work"
+- Merge "master" with "work"
 - Asset updates on "work"
 - Switch to "build
 - Merge "work with "build"
@@ -21,7 +21,7 @@ Git/Update Sequence
 - rm -rf pkg/
 - Release the gem to rubygems
 	rake release
-	
+
 - Switch to "master" branch
 - Merge "master" with "release"
 - Push to GitHub
